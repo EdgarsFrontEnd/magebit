@@ -9,6 +9,7 @@
 - Rename root folder to challenge2 or:
   - change root/public/.htaccess line2 to RewriteBase /YOUR_ROOT_NAME/public
   - change root/app/config.php line12 to define('ROOT_NAME', DS . 'YOUR_ROOT_NAME' . DS);
+- Navigate to root/app and run 'composer install' in terminal
 - Watch sass to generate css file
 
 ## App Logic
