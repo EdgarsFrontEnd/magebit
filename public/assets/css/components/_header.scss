@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $navigationHeight;
+
+  @include for-laptop-up {
+    padding: 0 20px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img:first-child {
+      transform: translateY(-3px);
+    }
+
+    img:last-child {
+      margin-left: 15px;
+
+      @include for-laptop-up {
+        display: none;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 30px;
+
+    @include for-laptop-up {
+      gap: 20px;
+    }
+
+    li {
+      list-style-type: none;
+
+      a {
+        color: $colorDarkGray;
+
+        @include for-laptop-up {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

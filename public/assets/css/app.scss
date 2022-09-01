@@ -1,0 +1,13 @@
+// Core files
+@import "core/boilerplate";
+@import "core/mixins";
+@import "core/typography";
+@import "core/vars";
+
+// Components
+@import "./components/header";
+@import "./components/footer";
+
+// Pages
+@import "./pages/home";
+@import "./pages/success";

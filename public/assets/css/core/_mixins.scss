@@ -1,0 +1,48 @@
+// consider 600 and 320
+@mixin for-mobile-up {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin for-mobile-down {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-down {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin for-laptop-up {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-laptop-down {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-down {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}

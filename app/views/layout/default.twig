@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ assets_path }}font_awesome/css/all.css">
+    <link rel="stylesheet" href="{{ assets_path }}/css/app.css">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="panel-left">
+            {% include ('common/header.twig') %}
+
+            <div class="content-wrapper">
+                <div class="content">
+                    {# {% include (template ~ '.twig') %} #}
+                    {% include ('pages/' ~ template ~ '.twig') %}
+
+                    <div class="line"></div>
+
+                    {% include ('common/footer.twig') %}
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-right"></div>
+    </div>
+
+</body>
+
+</html>

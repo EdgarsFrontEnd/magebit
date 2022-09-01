@@ -1,0 +1,29 @@
+<script type="module" src="{{ assets_path }}js/validation/validation.js"></script>
+
+<form action="{{ action }}" method="POST" id="form">
+
+    <div class="text">
+        <h1>Subscribe to newsletter</h1>
+
+        <p>Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
+    </div>
+
+    <div class="form-group">
+        <div class="email">
+            <input type="text" name="email" placeholder="Type your email address here..." id="email" />
+            <input type="submit" name="submit" id="submit" value="">
+        </div>
+
+        <div class="error-msg"></div>
+    </div>
+
+    <div class="form-group">
+        <div class="terms">
+            <input type="checkbox" name="terms" id="terms">
+            <p>I agree to <a href="#">terms of service</a></p>
+        </div>
+
+        <div class="error-msg"></div>
+    </div>
+
+</form>

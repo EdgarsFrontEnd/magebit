@@ -1,0 +1,213 @@
+// layout
+.page-container {
+  display: flex;
+
+  .panel-left {
+    width: 100%;
+
+    @include for-laptop-up {
+      background: linear-gradient(180deg, #ffffff 0%, $colorLightGray 100%);
+      max-width: 680px;
+      padding: 100px 100px 0 100px;
+    }
+  }
+
+  .panel-right {
+    display: none;
+    width: 100%;
+    background: url("../../img/hero_image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include for-laptop-up {
+      display: block;
+    }
+  }
+}
+
+// content
+.content-wrapper {
+  height: calc(100vh - $navigationHeight);
+  background: url("../../img/hero_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+
+  @include for-laptop-up {
+    background: transparent;
+  }
+
+  .content {
+    width: 100%;
+    min-height: 370px;
+    background: linear-gradient(180deg, #ffffff 0%, $colorLightGray 100%);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 3px;
+
+    @include for-laptop-up {
+      position: relative;
+      background: transparent;
+      transform: translateY(-14%);
+      gap: 50px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @include for-laptop-up {
+        gap: 15px;
+      }
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+      background-color: $colorGray;
+    }
+
+    a:hover {
+      color: $colorBlue;
+    }
+
+    a:focus {
+      color: #233759;
+    }
+  }
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include for-laptop-up {
+    gap: 50px;
+  }
+
+  .email {
+    position: relative;
+
+    // email
+    input[name="email"] {
+      width: 100%;
+      padding: 18px;
+      outline: none;
+      border: 1px solid $colorGray;
+      border-left: solid 4px $colorBlue;
+      transition: 0.2s;
+
+      @include for-laptop-up {
+        padding: 23px 0 23px 40px;
+        transform: translateX(-40px);
+        width: 660px;
+      }
+
+      &:hover {
+        background-color: $colorLightGray;
+      }
+
+      &:focus {
+        border: 1px solid $colorBlue;
+        border-left: solid 4px $colorBlue;
+      }
+    }
+
+    // submit
+    input[type="submit"] {
+      position: absolute;
+      top: 50%;
+      transform: translate(-150%, -50%);
+      background: url("../../img/submit-arrow/ic_arrow.svg");
+      width: 24px;
+      height: 14px;
+      border: none;
+
+      @include for-laptop-up {
+        right: -50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background: url("../../img/submit-arrow/ic_arrow_hover.svg");
+      }
+    }
+  }
+
+  // terms
+  .terms {
+    display: flex;
+    gap: 15px;
+
+    p {
+      font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+      width: 26px;
+      height: 26px;
+      border-radius: 3px;
+      border: 1px solid $colorGray;
+      outline: none;
+      -webkit-appearance: none;
+      padding: 5px;
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $colorLightGray;
+      }
+
+      &:checked {
+        background-color: $colorBlue;
+        background-image: url("../../img/ic_checkmark.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-origin: content-box;
+      }
+
+      &:focus-visible {
+        border: 2px solid $colorBlack;
+      }
+    }
+
+    a {
+      color: $colorBlack;
+      text-decoration: underline;
+    }
+  }
+
+  // errors
+  .error-msg {
+    position: absolute;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $colorDangerRed;
+    padding-top: 4px;
+  }
+
+  .form-group.error input {
+    border-color: $colorDangerRed;
+
+    &[type="submit"]:focus {
+      background: url("../../img/submit-arrow/ic_arrow.svg");
+    }
+  }
+
+  .form-group.success input[name="email"] {
+    border-color: $colorSuccessGreen;
+  }
+}

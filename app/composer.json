@@ -1,0 +1,17 @@
+{
+  "name": "ep98/app",
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "edgar",
+      "email": "edgarspujats10@gmail.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "^3.4"
+  }
+}

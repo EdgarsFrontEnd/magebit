@@ -1,0 +1,5 @@
+#sets whether you can "browse" the directory or not but accessible by url
+#Options -Indexes
+
+Order allow,deny
+Deny from all
